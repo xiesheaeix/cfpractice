@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Most Popular Movies</h1>
+
+{% for item in items %}
+<div class="container">
+    <div class="row">
+        <div class="col s6">
+            <p style="text-align: center;">{{ item.title }}</p>
+            <img src="{{ item.image }}" alt="movie-img">
+            <p>Year Released: {{ item.year }}</p>
+            <p>Rating: {{ item.imDbRating }}</p>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+
+{% endblock %}
